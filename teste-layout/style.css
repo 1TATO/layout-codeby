@@ -62,7 +62,7 @@ body {
 
 #categories {
   width: 1563px;
-  margin: 0 auto;
+  margin: 0 auto 75px;
 }
 
 #categories h2 {
@@ -131,4 +131,94 @@ body {
   width: 500px;
   height: 460px;
   background: url(./assets/pictures.jpg) center center no-repeat;
+}
+
+#growth-plans {
+  background-color: #f4f4f4;
+  padding: 80px 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+#growth-plans .titles {
+  display: inline-block;
+}
+
+#growth-plans .titles h2 {
+  font-size: 68px;
+}
+
+#growth-plans .titles p {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+#growth-plans #graphics {
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: -180px;
+}
+
+#graphics .graphic {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+}
+
+.graphic .top {
+  background-color: #005499;
+  height: 130px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.graphic .top h3 {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.graphic .top p {
+  font-size: 26px;
+}
+
+.graphic .bottom {
+  background-color: #0088ed;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.graphic .bottom p {
+  font-weight: 200;
+}
+
+#graphics .first {
+  height: 260px;
+}
+
+#graphics .second {
+  height: 300px;
+}
+
+#graphics .third {
+  height: 370px;
+}
+
+#graphics .fourth {
+  height: 435px;
+}
+
+#graphics .fifth {
+  height: 500px;
+}
+
+#graphics .sixth {
+  height: 570px;
 }
