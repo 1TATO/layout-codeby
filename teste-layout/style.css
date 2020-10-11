@@ -12,61 +12,82 @@ body {
 }
 
 #welcome {
-  width: 100%;
-  height: 100vh;
   background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+  padding: 0 20px;
 }
 
 .content {
-  width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  justify-content: space-around;
+  height: 100vh;
 }
 
 .content img {
   width: 200px;
   height: 200px;
-  margin: 120px 0;
+  margin-top: 1.5rem;
 }
 
 .content h1 {
-  font-size: 80px;
+  font-size: 5rem;
   color: white;
   text-align: center;
-  margin-bottom: 100px;
+  max-width: 900px;
 }
 
 .content a {
   background-color: white;
-  padding: 16px 90px;
+  padding: 1rem 5.6rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 22px;
-  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
 }
 
 .content a:visited {
   color: #383838;
 }
 
-#categories {
-  width: 1563px;
-  margin: 0 auto 75px;
+.content a:hover {
+  color: white;
+  background: none;
+  border: 1px solid white;
+  box-shadow: 0px 0px 70px 5px white;
+}
+
+.animation {
+	animation: up 1s ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  max-width: 1563px;
+  padding: 0 20px;
+  margin: 50px auto 75px;
 }
 
 #categories h2 {
-  margin-top: 50px;
-  font-size: 68px;
+  font-size: 4.2rem;
 }
 
 #categories p {
   font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 50px;
+  font-size: 1.3rem;
 }
 
 #cards {
@@ -74,80 +95,90 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 3rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   color: white;
-  padding: 40px 30px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
-.card h3 {
-  font-size: 62px;
+.card:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 15px 3px black;
 }
 
-#cards .card p {
-  font-size: 26px;
+.card:nth-child(2),
+.card:nth-child(5) {
+  margin-left: 2rem;
+}
+
+.card img {
+  position: relative;
+  width: 100%;
+  height: 28rem;
+}
+
+.card .container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.8rem 0;
+}
+
+.card .container h3 {
+  font-size: 3.5rem;
+}
+
+.card .container p {
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .nature {
-  width: 500px;
-  height: 460px;
-  background: url(./assets/nature.jpg);
-  background-size: cover;
+  width: 31%;
 }
 
 .daily {
-  width: 1000px;
-  height: 460px;
-  background-image: url(./assets/daily.jpg);
-  background-size: cover;
+  width: 62.5rem;
+  flex: 1;
 }
 
 .together {
   width: 100%;
-  height: 460px;
-  background-image: url(./assets/together.jpg);
-  background-size: cover;
-  display: flex;
   justify-content: center;
 }
 
 .analysis {
-  width: 1000px;
-  height: 460px;
-  background-image: url(./assets/analysis.jpg);
-  background-size: cover;
+  width: 62.5%;
   text-align: right;
+  align-items: flex-end;
 }
 
 .pictures {
-  width: 500px;
-  height: 460px;
-  background-image: url(./assets/pictures.jpg);
-  background-size: cover;
+  width: 31rem;
+  flex: 1;
 }
 
 #growth-plans {
   background-color: #f4f4f4;
-  padding: 80px 150px;
 }
 
-#growth-plans .titles {
+.wrapper .titles {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 }
 
-#growth-plans .titles h2 {
-  font-size: 68px;
+.wrapper .titles h2 {
+  font-size: 4.2rem;
 }
 
-#growth-plans .titles p {
+.wrapper .titles p {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 #growth-plans #graphics {
@@ -155,36 +186,38 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: -180px;
+  margin-top: -11rem;
 }
 
 #graphics .graphic {
   display: flex;
   flex-direction: column;
-  width: 230px;
+  flex: 1;
+  width: 14.3rem;
+  margin-right: 1rem;
 }
 
 .graphic .top {
   background-color: #005499;
-  height: 130px;
-  padding: 25px;
+  height: 8rem;
+  padding: 0 5% 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .graphic .top h3 {
-  font-size: 46px;
+  font-size: 3rem;
   font-weight: 600;
 }
 
 .graphic .top p {
-  font-size: 26px;
+  font-size: 1.6rem;
 }
 
 .graphic .bottom {
   background-color: #0088ed;
-  padding: 25px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -196,25 +229,162 @@ body {
 }
 
 #graphics .first {
-  height: 260px;
+  min-height: 16rem;
 }
 
 #graphics .second {
-  height: 300px;
+  height: 19rem;
 }
 
 #graphics .third {
-  height: 370px;
+  height: 23rem;
 }
 
 #graphics .fourth {
-  height: 435px;
+  height: 27rem;
 }
 
 #graphics .fifth {
-  height: 500px;
+  height: 31rem;
 }
 
 #graphics .sixth {
-  height: 570px;
+  height: 35.5rem;
+}
+
+@media (max-width: 1220px) {
+  .graphic .top h3 {
+    font-size: 2rem;
+  }
+  
+  .graphic .top p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  #cards {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  #cards .card {
+    width: 100%;
+  }
+
+  .card:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .card + .card {
+    margin: 20px 0 0;
+  }
+
+  .together {
+    justify-content: start;
+  }
+  
+  .analysis {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #growth-plans #graphics {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #graphics .graphic {
+    flex-direction: row;
+    width: 95vw;
+    height: 20px;
+    margin: 10px auto;
+  }
+
+  .graphic .top {
+    padding: 0 2rem;
+  }
+
+  .graphic .top h3 {
+    font-size: 3rem;
+  }
+  
+  .graphic .top p {
+    font-size: 1.6rem;
+  }
+
+  .graphic .bottom {
+    justify-content: start;
+  }
+
+  .graphic .bottom p {
+    font-size: 1.5rem;
+  }
+
+  #graphics .first {
+    order: 0;
+    min-height: 100%;
+  }
+
+  #graphics .second {
+    order: 1;
+  }
+
+  #graphics .third {
+    order: 2;
+  }
+
+  #graphics .fourth {
+    order: 3;
+  }
+
+  #graphics .fifth {
+    order: 4;
+  }
+
+  #graphics .sixth {
+    order: 5;
+  }
+}
+
+@media (max-width: 650px) {
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .card img {
+    height: 18rem;
+  }
+
+  .graphic .top h3 {
+    font-size: 2rem;
+  }
+  
+  .graphic .top p {
+    font-size: 1rem;
+  }
+
+  .graphic .bottom p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .content h1 {
+    font-size: 3rem;
+  }
+
+  #categories h2,
+  .wrapper .titles h2 {
+    font-size: 3rem;
+  }
+
+  #categories p,
+  .wrapper .titles p {
+    font-size: 1rem;
+  }
+
+  .graphic .bottom p {
+    font-size: 1rem;
+  }
 }
